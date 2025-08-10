@@ -292,6 +292,21 @@ require('lazy').setup({
     },
   },
 
+  {
+    -- LazyVim might be imported by omarchy themes, so disable defaults so only themes are loaded
+    'LazyVim/LazyVim',
+    opts = {
+      defaults = {
+        autocmds = false,
+        keymaps = false,
+      },
+      news = {
+        lazyvim = false,
+        neovim = false,
+      },
+    },
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
